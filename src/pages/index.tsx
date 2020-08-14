@@ -1,42 +1,41 @@
-import { graphql } from 'gatsby';
-import * as React from 'react';
-import * as styles from './Index.module.scss';
+import React, { useState } from 'react'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
-interface IndexPageProps {
-  data: {
-    site: {
-      siteMetadata: {
-        name: string;
-        tagline: string;
-      },
-    },
-  };
-}
-
-export const indexPageQuery = graphql`
-  query IndexPageQuery {
-    site {
-      siteMetadata {
-        name
-        tagline
+import * as styles from './Index.module.scss'
+import './index.scss'
+import ModalVideo from 'react-modal-video'
+const Index = () => {
+  const data = useStaticQuery(graphql`
+    query wpPosts {
+      allWpPost {
+        nodes {
+          content
+          id
+          title
+        }
       }
     }
-  }
-`;
-
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
-
-  public render() {
-    const {
-      name,
-      tagline,
-    } = this.props.data.site.siteMetadata;
-
-    return (
-      <div className={styles.Container}>
-        <h1>{name}</h1>
-        <p>{tagline}</p>
-      </div>
-    );
-  }
+  `)
+  console.log(data.allWpPost.nodes)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  return (
+    <div className={styles.Container}>
+      <h1> Hello </h1>
+      <ModalVideo
+        channel="youtube"
+        isOpen={isOpen}
+        videoId="H4mbVJGN8wM"
+        onClose={() => setIsOpen(false)}
+      />
+      <button onClick={() => setIsOpen(true)}>Open youtube video</button>
+      {data.allWpPost.nodes.map((item) => {
+        return (
+          <div key={item.id}>
+            <Link to={`post/${item.id}`}>{item.title}</Link>
+          </div>
+        )
+      })}
+    </div>
+  )
 }
+export default Index
