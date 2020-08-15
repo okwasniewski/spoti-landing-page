@@ -1,41 +1,52 @@
-import React, { useState } from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import MainTemplate from 'templates/mainTemplate'
+import GridElement from 'components/gridElement'
 
-import * as styles from './Index.module.scss'
-import './index.scss'
-import ModalVideo from 'react-modal-video'
 const Index = () => {
   const data = useStaticQuery(graphql`
-    query wpPosts {
-      allWpPost {
-        nodes {
-          content
-          id
-          title
+    {
+      SearchingImage: file(relativePath: { eq: "file-searching.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
   `)
-  console.log(data.allWpPost.nodes)
-  const [isOpen, setIsOpen] = useState<boolean>(false)
   return (
-    <div className={styles.Container}>
-      <h1> Hello </h1>
-      <ModalVideo
-        channel="youtube"
-        isOpen={isOpen}
-        videoId="H4mbVJGN8wM"
-        onClose={() => setIsOpen(false)}
-      />
-      <button onClick={() => setIsOpen(true)}>Open youtube video</button>
-      {data.allWpPost.nodes.map((item) => {
-        return (
-          <div key={item.id}>
-            <Link to={`post/${item.id}`}>{item.title}</Link>
-          </div>
-        )
-      })}
-    </div>
+    <MainTemplate>
+      <h1 className="mainTitle">
+        Poznaj platformę elearningową <span>S</span>poti<span>*</span>{' '}
+      </h1>
+      <p className="mainSubTitle">
+        Wszystko co jest potrzebne do prowadzenia szkoleń w internecie
+      </p>
+
+      <div className="mainGridWrapper">
+        <GridElement
+          fixed={data.SearchingImage.childImageSharp.fixed}
+          title="Niewiele wiem o elearningu"
+          badge="Szukam informacji"
+          color="#dasd"
+        />
+
+        <GridElement
+          fixed={data.SearchingImage.childImageSharp.fixed}
+          title="Jestem przekonany(a)
+          do wykorzystania elearningu"
+          badge="Szukam rozwiązania"
+          color="#dasd"
+        />
+        <GridElement
+          fixed={data.SearchingImage.childImageSharp.fixed}
+          title="Znam rozwiązania do elearningu"
+          badge="Potrzebuję konkretów"
+          color="#dasd"
+        />
+      </div>
+    </MainTemplate>
   )
 }
 export default Index
