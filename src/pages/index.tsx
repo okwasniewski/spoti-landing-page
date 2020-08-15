@@ -30,6 +30,7 @@ const Index = () => {
           title="Niewiele wiem o elearningu"
           badge="Szukam informacji"
           color="#dasd"
+          link={''}
         />
 
         <GridElement
@@ -38,12 +39,14 @@ const Index = () => {
           do wykorzystania elearningu"
           badge="Szukam rozwiązania"
           color="#dasd"
+          link={''}
         />
         <GridElement
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Znam rozwiązania do elearningu"
           badge="Potrzebuję konkretów"
           color="#dasd"
+          link={''}
         />
       </div>
     </MainTemplate>

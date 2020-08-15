@@ -1,0 +1,51 @@
+.footer {
+  background-color: #f9fbfd;
+  padding: 40px 0px;
+  width: 100%;
+  margin-top: 30px;
+  &__innerWrapper {
+    max-width: 1200px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  &__year {
+    color: #a2a5a9;
+    font-size: 14px;
+    a {
+      color: #5b92f9;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+  &__app {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    p {
+      margin-top: 0px;
+      font-weight: 400;
+      color: #a2a5a9;
+    }
+  }
+  @media (max-width: 748px) {
+    &__innerWrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__app {
+      align-items: center;
+      text-align: center;
+      font-size: 10px;
+    }
+    &__logoWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

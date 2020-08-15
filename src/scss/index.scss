@@ -62,10 +62,14 @@ button {
 }
 .mainGridWrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.8fr));
   grid-gap: 20px;
+  justify-content: center;
   padding-top: 80px;
-  height: 60vh;
+  min-height: 60vh;
+  a {
+    text-decoration: none;
+  }
 }
 @media (max-width: 748px) {
   .mainGridWrapper {
