@@ -1,8 +1,7 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import MainTemplate from 'templates/mainTemplate'
+import { useStaticQuery, graphql } from 'gatsby'
 import GridElement from 'components/gridElement'
-
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
@@ -18,38 +17,54 @@ const Index = () => {
   return (
     <MainTemplate>
       <h1 className="mainTitle">
-        Poznaj platformę elearningową <span>S</span>poti<span>*</span>
+        Jestem przekonany(-a) do wykorzystania elearningu
       </h1>
-      <p className="mainSubTitle">
-        Wszystko co jest potrzebne do prowadzenia szkoleń w internecie
-      </p>
+      <p className="mainSubTitle">Chcę...</p>
 
-      <div className="mainGridWrapper">
+      <div className="gridWrapper">
         <GridElement
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Niewiele wiem o elearningu"
-          badge="Szukam informacji"
           color="#dasd"
-          link={'/krok-1'}
+          link={'/post/cG9zdDo4MTI='}
         />
 
         <GridElement
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Jestem przekonany(a)
           do wykorzystania elearningu"
-          badge="Szukam rozwiązania"
           color="#dasd"
-          link={'/krok-2'}
+          link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Znam rozwiązania do elearningu"
-          badge="Potrzebuję konkretów"
           color="#dasd"
-          link={'/krok-3'}
+          link={'/post/cG9zdDo4MTI='}
+        />
+        <GridElement
+          fixed={data.SearchingImage.childImageSharp.fixed}
+          title="Niewiele wiem o elearningu"
+          color="#dasd"
+          link={'/post/cG9zdDo4MTI='}
+        />
+
+        <GridElement
+          fixed={data.SearchingImage.childImageSharp.fixed}
+          title="Jestem przekonany(a)
+          do wykorzystania elearningu"
+          color="#dasd"
+          link={'/post/cG9zdDo4MTI='}
+        />
+        <GridElement
+          fixed={data.SearchingImage.childImageSharp.fixed}
+          title="Znam rozwiązania do elearningu"
+          color="#dasd"
+          link={'/post/cG9zdDo4MTI='}
         />
       </div>
     </MainTemplate>
   )
 }
+
 export default Index

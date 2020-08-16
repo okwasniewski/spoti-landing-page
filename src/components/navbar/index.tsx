@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.scss'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import BurgerMenu from 'components/burgerMenu'
 import { FaBars } from 'react-icons/fa'
@@ -24,11 +24,20 @@ const Index = () => {
     <>
       <div className="navbar">
         <div className="navbar__innerWrapper">
-          <Img fixed={LogoData.file.childImageSharp.fixed} />
-
+          <Link to="/">
+            <Img fixed={LogoData.file.childImageSharp.fixed} />
+          </Link>
           <div className="navbar__ButtonInnerWrapper">
-            <button className="mainbutton unfilled">Zobacz demo</button>
-            <button className="mainbutton">Umów prezentację</button>
+            <button className="mainbutton unfilled">
+              <a href="https://spoti.com.pl" target="__blank" rel="noopener">
+                Zobacz demo
+              </a>
+            </button>
+            <button className="mainbutton">
+              <a href="https://bit.ly/2NZ7VNw" target="__blank" rel="noopener">
+                Umów prezentację
+              </a>
+            </button>
             <FaBars onClick={HandleBurger} />
           </div>
         </div>

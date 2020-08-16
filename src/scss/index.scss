@@ -40,8 +40,14 @@ button {
 }
 .gridWrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.8fr));
   grid-gap: 20px;
+  justify-content: center;
+  padding-top: 10px;
+  min-height: 60vh;
+  a {
+    text-decoration: none;
+  }
 }
 .mainbutton {
   background-color: #5b92f9;
@@ -55,9 +61,16 @@ button {
   max-height: 40px;
   margin: 5px;
 }
+.mainbutton a {
+  text-decoration: none;
+  color: white;
+}
 .unfilled {
   background-color: transparent;
   border: 2px solid #5b92f9;
+  color: #5b92f9;
+}
+.unfilled a {
   color: #5b92f9;
 }
 .mainGridWrapper {
@@ -88,4 +101,36 @@ button {
 .mainSubTitle {
   text-align: center;
   color: #3e3e3e;
+}
+
+.post {
+  max-width: 900px;
+  margin: 0 auto;
+  .wp-block-embed-youtube {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    text-align: center;
+  }
+  @media (max-width: 748px) {
+    .wp-block-embed-youtube {
+      width: 100%;
+      margin: 0px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    .wp-block-embed-youtube iframe {
+      width: 100%;
+      height: 200px;
+      margin: 0px;
+    }
+  }
+}
+
+@media (max-width: 748px) {
+  .post {
+    padding: 0px 30px;
+  }
 }

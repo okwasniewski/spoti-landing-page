@@ -2,13 +2,24 @@ import React from 'react'
 import Img from 'gatsby-image'
 import './index.scss'
 import { Link } from 'gatsby'
-const Index = ({ fixed, title, badge, color, link }) => {
+
+type GridElementProps = {
+  fixed: any
+  title: string
+  badge?: string
+  color?: string
+  link: string
+}
+const Index = ({ fixed, title, badge, color, link }: GridElementProps) => {
   return (
     <Link to={link}>
       <div className="gridElement">
-        <div className="gridElement__badgeWrapper">
-          <p>{badge}</p>
-        </div>
+        {badge?.length > 0 ? (
+          <div className="gridElement__badgeWrapper">
+            <p>{badge}</p>
+          </div>
+        ) : null}
+
         <div className="gridElement__ImgWrapper">
           <Img fixed={fixed} />
         </div>

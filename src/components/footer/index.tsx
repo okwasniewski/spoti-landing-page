@@ -29,7 +29,9 @@ const Index = () => {
           <Img fixed={LogoData.footerImage.childImageSharp.fixed} />
           <p className="footer__year">
             © {Year} -
-            <a href="https://etechnologie.pl/"> eTechnologie Sp. z o.o.</a>
+            <a href="https://etechnologie.pl/" target="__blank" rel="noopener">
+              eTechnologie Sp. z o.o.
+            </a>
           </p>
         </div>
         <div className="footer__app">
@@ -38,7 +40,13 @@ const Index = () => {
             <br></br>
             aplikacji mobilnej dla urządzeń z systemem Android
           </p>
-          <Img fixed={LogoData.googlePlay.childImageSharp.fixed} />
+          <a
+            href="https://play.google.com/store/apps/details?id=com.eTechnologie.Spoti"
+            target="__blank"
+            rel="noopener"
+          >
+            <Img fixed={LogoData.googlePlay.childImageSharp.fixed} />
+          </a>
         </div>
       </div>
     </footer>
