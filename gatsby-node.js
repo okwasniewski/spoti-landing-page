@@ -18,6 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
           content
           id
           title
+          slug
         }
       }
     }
@@ -25,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allPosts.nodes.forEach((node) => {
     createPage({
-      path: `/post/${node.id}`,
+      path: `/wpis/${node.slug}`,
       component: path.resolve(`./src/templates/postTemplate.tsx`),
       context: {
         content: node.content,

@@ -1,17 +1,20 @@
 module.exports = {
   siteMetadata: {
-    name: `Hello Typescript World!`,
-    tagline: `Gatsby + SASS + Typescript = 💪`,
+    title: `Spoti`,
+    siteUrl: `http://spoti.com.pl/`,
+    description: `Poznaj platformę e-learningową Spoti`,
+    facebook: `@spoti.elearning`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
-        url: `https://dev.ekursy.online/graphql`,
+        url: `https://spoti.com.pl/graphql`,
         verbose: true,
         develop: {
           hardCacheMediaFiles: true,

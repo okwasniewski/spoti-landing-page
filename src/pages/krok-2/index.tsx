@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import GridElement from 'components/gridElement'
 import { motion } from 'framer-motion'
 import { fadeInUp, stagger } from 'utils/animations'
+import Seo from 'components/seo'
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
@@ -18,6 +19,10 @@ const Index = () => {
   `)
   return (
     <MainTemplate>
+      <Seo
+        pageTitle="Krok 2"
+        description="Poznaj platformę e-learningową Spoti"
+      />
       <h1 className="mainTitle">
         Jestem przekonany(-a) <br className="rwd-break" />
         do wykorzystania elearningu

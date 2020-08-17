@@ -4,6 +4,7 @@ import MainTemplate from 'templates/mainTemplate'
 import GridElement from 'components/gridElement'
 import { motion } from 'framer-motion'
 import { fadeInUp, stagger } from 'utils/animations'
+import Seo from 'components/seo'
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
@@ -14,7 +15,7 @@ const Index = () => {
           }
         }
       }
-      WorkingImage: file(relativePath: { eq: "Working.png" }) {
+      WorkingImage: file(relativePath: { eq: "working.png" }) {
         childImageSharp {
           fixed(width: 150) {
             ...GatsbyImageSharpFixed
@@ -32,11 +33,16 @@ const Index = () => {
   `)
   return (
     <MainTemplate>
+      <Seo
+        pageTitle="Strona główna"
+        description="Poznaj platformę e-learningową Spoti"
+      />
       <h1 className="mainTitle">
-        Poznaj platformę elearningową <span>S</span>poti<span>*</span>
+        Specjalizujemy się w szkoleniach online i e-learningu.
       </h1>
       <p className="mainSubTitle">
-        Wszystko co jest potrzebne do prowadzenia szkoleń w internecie
+        W jaki sposób możemy pomóc? (Proszę zaznaczyć opis, który najlepiej
+        pasuje do Państwa)
       </p>
 
       <motion.div
@@ -52,6 +58,7 @@ const Index = () => {
           title="Niewiele wiem o elearningu"
           badge="Szukam informacji"
           link={'/krok-1'}
+          color="#00BFA6"
         />
 
         <GridElement
@@ -60,7 +67,6 @@ const Index = () => {
           title="Jestem przekonany(a)
           do wykorzystania elearningu"
           badge="Szukam rozwiązania"
-          color="#00BFA6"
           link={'/krok-2'}
         />
         <GridElement
@@ -68,7 +74,7 @@ const Index = () => {
           fixed={data.BusinessDeal.childImageSharp.fixed}
           title="Znam rozwiązania do elearningu"
           badge="Potrzebuję konkretów"
-          color="#F9A826"
+          color="#6C63FF"
           link={'/krok-3'}
         />
       </motion.div>

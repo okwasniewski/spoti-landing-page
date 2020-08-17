@@ -1,14 +1,49 @@
-import React, { useState } from 'react'
+import React from 'react'
 import MainTemplate from 'templates/mainTemplate'
 import { useStaticQuery, graphql } from 'gatsby'
 import GridElement from 'components/gridElement'
 import { motion } from 'framer-motion'
 import { fadeInUp, stagger } from 'utils/animations'
-import ModalVideo from 'react-modal-video'
+import Seo from 'components/seo'
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
-      SearchingImage: file(relativePath: { eq: "file-searching.png" }) {
+      Company: file(relativePath: { eq: "Company.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      Maintenance: file(relativePath: { eq: "Maintenance.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      Questions: file(relativePath: { eq: "Questions.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      Rising: file(relativePath: { eq: "Rising.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      Telecommuting: file(relativePath: { eq: "Telecommuting.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      DataTrends: file(relativePath: { eq: "Data-Trends.png" }) {
         childImageSharp {
           fixed(width: 150) {
             ...GatsbyImageSharpFixed
@@ -17,14 +52,12 @@ const Index = () => {
       }
     }
   `)
-  const [isOpen, setIsOpen] = useState(false)
-  const [videoID, setVideoID] = useState('')
-  const HandleVideoChange = (id) => {
-    setIsOpen(true)
-    setVideoID(id)
-  }
   return (
     <MainTemplate>
+      <Seo
+        pageTitle="Krok 1"
+        description="Poznaj platformę e-learningową Spoti"
+      />
       <h1 className="mainTitle">
         Niewiem wiele <br className="rwd-break" />o e-learningu, szukam
         informacji
@@ -40,56 +73,58 @@ const Index = () => {
       >
         <GridElement
           variants={fadeInUp}
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.Rising.childImageSharp.fixed}
           title="Poznać korzyści z zastosowania elearningu"
           color="#dasd"
-          onClick={() => HandleVideoChange('K7yZbpOr-fw')}
+          link={
+            '/wpis/co-to-jest-platforma-elearningowa-i-jakie-sa-korzysci-z-wykorzystania-w-firmie'
+          }
         />
 
         <GridElement
           variants={fadeInUp}
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.DataTrends.childImageSharp.fixed}
           title="Poznać najnowsze trendy w elearningu"
           color="#dasd"
-          onClick={() => HandleVideoChange('H4mbVJGN8wM')}
+          link={'/wpis/6-najnowszych-trendow-w-e-learningu-ktore-warto-poznac'}
         />
         <GridElement
           variants={fadeInUp}
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.Questions.childImageSharp.fixed}
           title="Poznać 9 najczęściej zadawanych pytań dotyczących e-learningu."
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={
+            '/wpis/9-najczesciej-zadawanych-pytan-dotyczacych-e-learningu-i-platformy-spoti'
+          }
         />
         <GridElement
           variants={fadeInUp}
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.Maintenance.childImageSharp.fixed}
           title="Dowiedzieć się co jest potrzebne do wdrożenia e-learningu"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={
+            '/wpis/co-jest-potrzebne-do-wdrozenia-e-learningu-szkolen-online-w-firmie'
+          }
         />
 
         <GridElement
           variants={fadeInUp}
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.Company.childImageSharp.fixed}
           title="Dowiedzieć się, w jaki sposób platforma Spoti zwiększa 
           efektywność zespołu."
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={
+            '/wpis/w-jaki-sposob-platforma-e-learningowa-spoti-zwieksza-efektywnosc-zespolu'
+          }
         />
         <GridElement
           variants={fadeInUp}
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.Telecommuting.childImageSharp.fixed}
           title="Umówić się na wstępne spotkanie"
           color="#dasd"
           externalLink={'https://etechnologie.pl/kalendarz-prezentacji/'}
         />
       </motion.div>
-      <ModalVideo
-        channel="youtube"
-        isOpen={isOpen}
-        videoId={videoID}
-        onClose={() => setIsOpen(false)}
-      />
     </MainTemplate>
   )
 }
