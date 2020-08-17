@@ -12,42 +12,42 @@ const Index = () => {
       Company: file(relativePath: { eq: "Company.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       Maintenance: file(relativePath: { eq: "Maintenance.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       Questions: file(relativePath: { eq: "Questions.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       Rising: file(relativePath: { eq: "Rising.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       Telecommuting: file(relativePath: { eq: "Telecommuting.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       DataTrends: file(relativePath: { eq: "Data-Trends.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }

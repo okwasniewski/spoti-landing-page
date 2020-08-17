@@ -11,21 +11,21 @@ const Index = () => {
       SearchingImage: file(relativePath: { eq: "file-searching.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       WorkingImage: file(relativePath: { eq: "Working.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       BusinessDeal: file(relativePath: { eq: "BusinessDeal.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }

@@ -12,7 +12,7 @@ const Index = () => {
       SearchingImage: file(relativePath: { eq: "file-searching.png" }) {
         childImageSharp {
           fixed(width: 150) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }

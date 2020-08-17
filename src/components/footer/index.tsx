@@ -9,14 +9,14 @@ const Index = () => {
       footerImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fixed(width: 90) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       googlePlay: file(relativePath: { eq: "google-play.png" }) {
         childImageSharp {
           fixed(width: 120) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
