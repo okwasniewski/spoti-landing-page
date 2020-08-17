@@ -11,6 +11,7 @@ type GridElementProps = {
   link?: string
   externalLink?: string
   variants?: any
+  onClick?: any
 }
 const Index = ({
   fixed,
@@ -20,6 +21,7 @@ const Index = ({
   link,
   externalLink,
   variants,
+  onClick,
 }: GridElementProps) => {
   const BadgeStyles = {
     backgroundColor: color,
@@ -57,6 +59,21 @@ const Index = ({
           <h4 className="gridElement__title">{title}</h4>
         </motion.div>
       </a>
+    )
+  } else {
+    return (
+      <motion.div variants={variants} className="gridElement" onClick={onClick}>
+        {badge?.length > 0 ? (
+          <div className="gridElement__badgeWrapper">
+            <p>{badge}</p>
+          </div>
+        ) : null}
+
+        <div className="gridElement__ImgWrapper">
+          <Img fixed={fixed} />
+        </div>
+        <h4 className="gridElement__title">{title}</h4>
+      </motion.div>
     )
   }
 }

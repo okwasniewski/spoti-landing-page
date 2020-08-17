@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MainTemplate from 'templates/mainTemplate'
 import { useStaticQuery, graphql } from 'gatsby'
 import GridElement from 'components/gridElement'
 import { motion } from 'framer-motion'
 import { fadeInUp, stagger } from 'utils/animations'
+import ModalVideo from 'react-modal-video'
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
@@ -16,6 +17,12 @@ const Index = () => {
       }
     }
   `)
+  const [isOpen, setIsOpen] = useState(false)
+  const [videoID, setVideoID] = useState('')
+  const HandleVideoChange = (id) => {
+    setIsOpen(true)
+    setVideoID(id)
+  }
   return (
     <MainTemplate>
       <h1 className="mainTitle">
@@ -36,7 +43,7 @@ const Index = () => {
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Poznać korzyści z zastosowania elearningu"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          onClick={() => HandleVideoChange('K7yZbpOr-fw')}
         />
 
         <GridElement
@@ -44,7 +51,7 @@ const Index = () => {
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Poznać najnowsze trendy w elearningu"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          onClick={() => HandleVideoChange('H4mbVJGN8wM')}
         />
         <GridElement
           variants={fadeInUp}
@@ -77,6 +84,12 @@ const Index = () => {
           externalLink={'https://etechnologie.pl/kalendarz-prezentacji/'}
         />
       </motion.div>
+      <ModalVideo
+        channel="youtube"
+        isOpen={isOpen}
+        videoId={videoID}
+        onClose={() => setIsOpen(false)}
+      />
     </MainTemplate>
   )
 }
