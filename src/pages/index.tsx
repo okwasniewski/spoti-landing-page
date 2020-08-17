@@ -15,7 +15,7 @@ const Index = () => {
           }
         }
       }
-      WorkingImage: file(relativePath: { eq: "working.png" }) {
+      WorkingImage: file(relativePath: { eq: "Working.png" }) {
         childImageSharp {
           fixed(width: 150) {
             ...GatsbyImageSharpFixed
