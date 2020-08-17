@@ -2,6 +2,8 @@ import React from 'react'
 import MainTemplate from 'templates/mainTemplate'
 import { useStaticQuery, graphql } from 'gatsby'
 import GridElement from 'components/gridElement'
+import { motion } from 'framer-motion'
+import { fadeInUp, stagger } from 'utils/animations'
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
@@ -22,8 +24,15 @@ const Index = () => {
       </h1>
       <p className="stepsSubTitle">Chcę...</p>
 
-      <div className="gridWrapper">
+      <motion.div
+        className="gridWrapper"
+        variants={stagger}
+        initial="initial"
+        animate="animate"
+        exit={{ opacity: 0 }}
+      >
         <GridElement
+          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Poznać korzyści z zastosowania elearningu"
           color="#dasd"
@@ -31,18 +40,21 @@ const Index = () => {
         />
 
         <GridElement
+          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Poznać najnowsze trendy w elearningu"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
+          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Poznać 9 najczęściej zadawanych pytań dotyczących e-learningu."
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
+          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Dowiedzieć się co jest potrzebne do wdrożenia e-learningu"
           color="#dasd"
@@ -50,6 +62,7 @@ const Index = () => {
         />
 
         <GridElement
+          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Dowiedzieć się, w jaki sposób platforma Spoti zwiększa 
           efektywność zespołu."
@@ -57,12 +70,13 @@ const Index = () => {
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
+          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Umówić się na wstępne spotkanie"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          externalLink={'https://etechnologie.pl/kalendarz-prezentacji/'}
         />
-      </div>
+      </motion.div>
     </MainTemplate>
   )
 }

@@ -2,11 +2,26 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import MainTemplate from 'templates/mainTemplate'
 import GridElement from 'components/gridElement'
-
+import { motion } from 'framer-motion'
+import { fadeInUp, stagger } from 'utils/animations'
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
       SearchingImage: file(relativePath: { eq: "file-searching.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      WorkingImage: file(relativePath: { eq: "Working.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      BusinessDeal: file(relativePath: { eq: "BusinessDeal.png" }) {
         childImageSharp {
           fixed(width: 150) {
             ...GatsbyImageSharpFixed
@@ -24,31 +39,39 @@ const Index = () => {
         Wszystko co jest potrzebne do prowadzenia szkoleń w internecie
       </p>
 
-      <div className="mainGridWrapper">
+      <motion.div
+        className="mainGridWrapper"
+        variants={stagger}
+        initial="initial"
+        animate="animate"
+        exit={{ opacity: 0 }}
+      >
         <GridElement
+          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Niewiele wiem o elearningu"
           badge="Szukam informacji"
-          color="#dasd"
           link={'/krok-1'}
         />
 
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          variants={fadeInUp}
+          fixed={data.WorkingImage.childImageSharp.fixed}
           title="Jestem przekonany(a)
           do wykorzystania elearningu"
           badge="Szukam rozwiązania"
-          color="#dasd"
+          color="#00BFA6"
           link={'/krok-2'}
         />
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          variants={fadeInUp}
+          fixed={data.BusinessDeal.childImageSharp.fixed}
           title="Znam rozwiązania do elearningu"
           badge="Potrzebuję konkretów"
-          color="#dasd"
+          color="#F9A826"
           link={'/krok-3'}
         />
-      </div>
+      </motion.div>
     </MainTemplate>
   )
 }
