@@ -144,6 +144,15 @@ button {
     display: flex;
     justify-content: center;
   }
+  figure {
+    margin: 0px;
+  }
+  .wp-block-image {
+    margin: 0px;
+  }
+  iframe {
+    width: 700px;
+  }
   &__title {
     text-align: center;
     font-weight: 500;
@@ -181,4 +190,10 @@ nav .breadcrumb__list {
 }
 .breadcrumb a {
   color: #3e3e3e;
+}
+.backButton {
+  svg {
+    padding-top: 3px;
+  }
+  margin-top: 20px;
 }

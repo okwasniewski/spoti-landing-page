@@ -1,8 +1,9 @@
 import React from 'react'
 import MainTemplate from 'templates/mainTemplate'
+import { navigate } from 'gatsby'
 import Seo from 'components/seo'
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
-const PostTemplate = ({ pageContext, location }) => {
+import { FaArrowLeft } from 'react-icons/fa'
+const PostTemplate = ({ pageContext }) => {
   function createMarkup() {
     return { __html: pageContext.content }
   }
@@ -12,8 +13,11 @@ const PostTemplate = ({ pageContext, location }) => {
         pageTitle={pageContext.title}
         description="Poznaj platformę e-learningową Spoti"
       />
-      <Breadcrumb location={location} crumbLabel={pageContext.title} />
+
       <div className="post">
+        <button className="mainbutton backButton" onClick={() => navigate(-1)}>
+          <FaArrowLeft /> Wróć
+        </button>
         <h1 className="post__title">{pageContext.title}</h1>
         <div dangerouslySetInnerHTML={createMarkup()}></div>
       </div>
