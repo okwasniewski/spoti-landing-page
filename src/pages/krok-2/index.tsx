@@ -17,9 +17,10 @@ const Index = () => {
   return (
     <MainTemplate>
       <h1 className="mainTitle">
-        Jestem przekonany(-a) do wykorzystania elearningu
+        Jestem przekonany(-a) <br className="rwd-break" />
+        do wykorzystania elearningu
       </h1>
-      <p className="mainSubTitle">Chcę...</p>
+      <p className="stepsSubTitle">Chcę...</p>
 
       <div className="gridWrapper">
         <GridElement

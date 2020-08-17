@@ -89,9 +89,13 @@ button {
     padding-top: 30px;
   }
 }
+.stepsSubTitle {
+  font-size: 22px;
+  text-align: center;
+}
 
 .mainTitle {
-  padding-top: 20px;
+  padding: 20px 20px 0px 20px;
   text-align: center;
   color: #3e3e3e;
   span {
@@ -102,7 +106,11 @@ button {
   text-align: center;
   color: #3e3e3e;
 }
-
+@media (min-width: 748px) {
+  .rwd-break {
+    display: none;
+  }
+}
 .post {
   max-width: 900px;
   margin: 0 auto;

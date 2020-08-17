@@ -17,7 +17,7 @@ const Index = () => {
   return (
     <MainTemplate>
       <h1 className="mainTitle">Znam rozwiązania do elearningu</h1>
-      <p className="mainSubTitle">Chcę...</p>
+      <p className="stepsSubTitle">Chcę...</p>
 
       <div className="gridWrapper">
         <GridElement

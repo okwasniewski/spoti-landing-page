@@ -16,11 +16,6 @@ module.exports = {
         develop: {
           hardCacheMediaFiles: true,
         },
-        debug: {
-          graphql: {
-            writeQueriesToDisk: true,
-          },
-        },
       },
     },
     {
