@@ -197,3 +197,15 @@ nav .breadcrumb__list {
   }
   margin-top: 20px;
 }
+
+.Wrapper404 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  padding: 20px;
+  &__buttonWrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
