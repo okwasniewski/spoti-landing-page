@@ -12,18 +12,7 @@ module.exports = {
     `gatsby-plugin-tslint`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-remove-trailing-slashes`,
-    {
-      resolve: `gatsby-plugin-breadcrumb`,
-      options: {
-        defaultCrumb: {
-          location: {
-            pathname: '/',
-          },
-          crumbLabel: 'Strona główna',
-          crumbSeparator: ' > ',
-        },
-      },
-    },
+
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
