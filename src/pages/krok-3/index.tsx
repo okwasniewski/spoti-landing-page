@@ -5,7 +5,9 @@ import GridElement from 'components/gridElement'
 import { motion } from 'framer-motion'
 import { fadeInUp, stagger } from 'utils/animations'
 import Seo from 'components/seo'
-const Index = () => {
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+
+const Index = ({ location }) => {
   const data = useStaticQuery(graphql`
     {
       SearchingImage: file(relativePath: { eq: "file-searching.png" }) {
@@ -25,6 +27,7 @@ const Index = () => {
       />
       <h1 className="mainTitle">Znam rozwiązania do elearningu</h1>
       <p className="stepsSubTitle">Chcę...</p>
+      <Breadcrumb location={location} crumbLabel="Krok 3" />
 
       <motion.div
         className="gridWrapper"

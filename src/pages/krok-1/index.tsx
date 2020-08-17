@@ -5,7 +5,9 @@ import GridElement from 'components/gridElement'
 import { motion } from 'framer-motion'
 import { fadeInUp, stagger } from 'utils/animations'
 import Seo from 'components/seo'
-const Index = () => {
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+
+const Index = ({ location }) => {
   const data = useStaticQuery(graphql`
     {
       Company: file(relativePath: { eq: "Company.png" }) {
@@ -58,6 +60,7 @@ const Index = () => {
         pageTitle="Krok 1"
         description="Poznaj platformę e-learningową Spoti"
       />
+      <Breadcrumb location={location} crumbLabel="Krok 1" />
       <h1 className="mainTitle">
         Niewiem wiele <br className="rwd-break" />o e-learningu, szukam
         informacji

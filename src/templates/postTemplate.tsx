@@ -1,7 +1,8 @@
 import React from 'react'
 import MainTemplate from 'templates/mainTemplate'
 import Seo from 'components/seo'
-const PostTemplate = ({ pageContext }) => {
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+const PostTemplate = ({ pageContext, location }) => {
   function createMarkup() {
     return { __html: pageContext.content }
   }
@@ -11,6 +12,7 @@ const PostTemplate = ({ pageContext }) => {
         pageTitle={pageContext.title}
         description="Poznaj platformę e-learningową Spoti"
       />
+      <Breadcrumb location={location} crumbLabel={pageContext.title} />
       <div className="post">
         <h1 className="post__title">{pageContext.title}</h1>
         <div dangerouslySetInnerHTML={createMarkup()}></div>

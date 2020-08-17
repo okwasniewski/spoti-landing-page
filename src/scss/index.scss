@@ -169,3 +169,16 @@ button {
     padding: 0px 30px;
   }
 }
+nav.breadcrumb {
+  color: #3e3e3e;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+nav .breadcrumb__list {
+  padding: 20px;
+}
+.breadcrumb a {
+  color: #3e3e3e;
+}

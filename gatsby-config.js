@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Spoti`,
-    siteUrl: `http://spoti.com.pl/`,
+    siteUrl: `https://spoti.vercel.app`,
     description: `Poznaj platformę e-learningową Spoti`,
     facebook: `@spoti.elearning`,
   },
@@ -11,6 +11,19 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-remove-trailing-slashes`,
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        defaultCrumb: {
+          location: {
+            pathname: '/',
+          },
+          crumbLabel: 'Strona główna',
+          crumbSeparator: ' > ',
+        },
+      },
+    },
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
