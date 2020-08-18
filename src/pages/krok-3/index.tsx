@@ -7,7 +7,44 @@ import Seo from 'components/seo'
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
-      SearchingImage: file(relativePath: { eq: "file-searching.png" }) {
+      Typing: file(relativePath: { eq: "Typing.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      TelecommutingPurple: file(
+        relativePath: { eq: "Telecommuting-purple.png" }
+      ) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      RevenueRafiki: file(relativePath: { eq: "Revenue-rafiki.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      ResumeFolder: file(relativePath: { eq: "Resume-folder.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      PieChart: file(relativePath: { eq: "Pie-chart.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      Agreement: file(relativePath: { eq: "Agreement.png" }) {
         childImageSharp {
           fixed(width: 150) {
             ...GatsbyImageSharpFixed_withWebp
@@ -27,39 +64,39 @@ const Index = () => {
 
       <div className="gridWrapper">
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.ResumeFolder.childImageSharp.fixed}
           title="Dowiedzieć się jakie doświadczenie ma firma eTechnologie"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
 
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.PieChart.childImageSharp.fixed}
           title="Dowiedzieć się dlaczego warto skorzystać właśnie z oferty eTechnologie"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.RevenueRafiki.childImageSharp.fixed}
           title="Zapoznać się z ofertą cenową"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.Typing.childImageSharp.fixed}
           title="Skorzystać z 30 dniowej bezpłatnej wersji testowej"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
 
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.TelecommutingPurple.childImageSharp.fixed}
           title="Umówić się na spotkanie"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          externalLink={'https://bit.ly/2NZ7VNw'}
         />
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
+          fixed={data.Agreement.childImageSharp.fixed}
           title="Podpisać umowę"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}

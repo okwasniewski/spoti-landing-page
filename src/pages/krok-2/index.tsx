@@ -7,7 +7,42 @@ import Seo from 'components/seo'
 const Index = () => {
   const data = useStaticQuery(graphql`
     {
-      SearchingImage: file(relativePath: { eq: "file-searching.png" }) {
+      Creativity: file(relativePath: { eq: "Creativity.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      FeaturesOverview: file(relativePath: { eq: "Features-Overview.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      KidsStudying: file(relativePath: { eq: "Kids-Studying.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      Onboarding: file(relativePath: { eq: "Onboarding.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      PersonalSettings: file(relativePath: { eq: "Personal-settings.png" }) {
+        childImageSharp {
+          fixed(width: 150) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+      Preferences: file(relativePath: { eq: "Preferences.png" }) {
         childImageSharp {
           fixed(width: 150) {
             ...GatsbyImageSharpFixed_withWebp
@@ -31,42 +66,42 @@ const Index = () => {
 
       <div className="gridWrapper">
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
-          title="Niewiele wiem o elearningu"
+          fixed={data.Creativity.childImageSharp.fixed}
+          title="Zobaczyć jak wygląda proces tworzenia szkoleń na platformie"
+          color="#dasd"
+          externalLink={
+            'https://spoti.com.pl/zagadnienia/1-tworzenie-struktury-szkolenia/'
+          }
+        />
+
+        <GridElement
+          fixed={data.FeaturesOverview.childImageSharp.fixed}
+          title="Poznać możliwości platformy Spoti"
+          color="#dasd"
+          link={'/post/cG9zdDo4MTI='}
+        />
+        <GridElement
+          fixed={data.KidsStudying.childImageSharp.fixed}
+          title="Dowiedzieć się jakie szkolenia można tworzyć na platformie e-learningowej Spoti?"
+          color="#dasd"
+          link={'/post/cG9zdDo4MTI='}
+        />
+        <GridElement
+          fixed={data.PersonalSettings.childImageSharp.fixed}
+          title="Poznać możliwości dostosowania i personalizacji platformy do moich potrzeb"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
 
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
-          title="Jestem przekonany(a)
-          do wykorzystania elearningu"
+          fixed={data.Preferences.childImageSharp.fixed}
+          title="Dowiedzieć się jakie funkcje powinna posiadać nowoczesna platformą e-learningowa"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
-          title="Znam rozwiązania do elearningu"
-          color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
-        />
-        <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
-          title="Niewiele wiem o elearningu"
-          color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
-        />
-
-        <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
-          title="Jestem przekonany(a)
-          do wykorzystania elearningu"
-          color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
-        />
-        <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
-          title="Znam rozwiązania do elearningu"
+          fixed={data.Onboarding.childImageSharp.fixed}
+          title="Poznać najczęściej spotykane scenariusze wdrożenia platformy Spoti"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
