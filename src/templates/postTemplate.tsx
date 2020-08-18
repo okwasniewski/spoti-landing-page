@@ -31,7 +31,7 @@ const PostTemplate = ({ data: { wpPost } }) => {
   return (
     <MainTemplate>
       <Seo
-        pageTitle={'post'}
+        pageTitle={wpPost.title}
         description="Poznaj platformę e-learningową Spoti"
       />
 
