@@ -1,4 +1,5 @@
 const path = require('path')
+const { notEqual } = require('assert')
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -15,9 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
     {
       allPosts: allWpPost {
         nodes {
-          content
           id
-          title
           slug
         }
       }
@@ -29,8 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/blog/${node.slug}`,
       component: path.resolve(`./src/templates/postTemplate.tsx`),
       context: {
-        content: node.content,
-        title: node.title,
+        PostID: node.id,
       },
     })
   })
