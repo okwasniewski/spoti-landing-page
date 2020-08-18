@@ -78,32 +78,38 @@ const Index = () => {
           fixed={data.FeaturesOverview.childImageSharp.fixed}
           title="Poznać możliwości platformy Spoti"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={'/blog/nowe-funkcje-i-mozliwosci-na-platformie-spoti'}
         />
         <GridElement
           fixed={data.KidsStudying.childImageSharp.fixed}
           title="Dowiedzieć się jakie szkolenia można tworzyć na platformie e-learningowej Spoti?"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={'/blog/jakie-typy-szkolen-mozna-tworzyc-na-platformie-spoti'}
         />
         <GridElement
           fixed={data.PersonalSettings.childImageSharp.fixed}
           title="Poznać możliwości dostosowania i personalizacji platformy do moich potrzeb"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={
+            '/blog/poznaj-mozliwosci-dostosowania-i-personalizacji-platformy-e-learningowej-spoti'
+          }
         />
 
         <GridElement
           fixed={data.Preferences.childImageSharp.fixed}
           title="Dowiedzieć się jakie funkcje powinna posiadać nowoczesna platformą e-learningowa"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={
+            '/blog/jakie-cechy-i-funkcje-powinna-posiadac-nowoczesna-platforma-e-learningowa'
+          }
         />
         <GridElement
           fixed={data.Onboarding.childImageSharp.fixed}
           title="Poznać najczęściej spotykane scenariusze wdrożenia platformy Spoti"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={
+            '/blog/najczesciej-spotykane-scenariusze-wdrozenia-platformy-spoti'
+          }
         />
       </div>
     </MainTemplate>

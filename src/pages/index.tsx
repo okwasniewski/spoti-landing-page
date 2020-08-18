@@ -38,9 +38,9 @@ const Index = () => {
       <h1 className="mainTitle">
         Specjalizujemy się w szkoleniach online i e-learningu.
       </h1>
-      <p className="mainSubTitle">
-        W jaki sposób możemy pomóc? (Proszę zaznaczyć opis, który najlepiej
-        pasuje do Państwa)
+      <p className="mainSubTitle">W jaki sposób możemy pomóc?</p>
+      <p className="mainHelper">
+        (Proszę zaznaczyć opis, który najlepiej pasuje do Państwa)
       </p>
 
       <div className="mainGridWrapper">
