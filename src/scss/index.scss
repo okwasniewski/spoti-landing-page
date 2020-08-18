@@ -217,3 +217,20 @@ nav .breadcrumb__list {
     justify-content: center;
   }
 }
+
+.postCTA {
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  h3 {
+    padding: 20px;
+    text-align: left;
+  }
+  button {
+    width: 40%;
+  }
+  background-color: aliceblue;
+}
