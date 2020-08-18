@@ -2,8 +2,6 @@ import React from 'react'
 import MainTemplate from 'templates/mainTemplate'
 import { useStaticQuery, graphql } from 'gatsby'
 import GridElement from 'components/gridElement'
-import { motion } from 'framer-motion'
-import { fadeInUp, stagger } from 'utils/animations'
 import Seo from 'components/seo'
 
 const Index = () => {
@@ -31,15 +29,8 @@ const Index = () => {
       </h1>
       <p className="stepsSubTitle">Chcę...</p>
 
-      <motion.div
-        className="gridWrapper"
-        variants={stagger}
-        initial="initial"
-        animate="animate"
-        exit={{ opacity: 0 }}
-      >
+      <div className="gridWrapper">
         <GridElement
-          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Niewiele wiem o elearningu"
           color="#dasd"
@@ -47,7 +38,6 @@ const Index = () => {
         />
 
         <GridElement
-          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Jestem przekonany(a)
           do wykorzystania elearningu"
@@ -55,14 +45,12 @@ const Index = () => {
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
-          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Znam rozwiązania do elearningu"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
-          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Niewiele wiem o elearningu"
           color="#dasd"
@@ -70,7 +58,6 @@ const Index = () => {
         />
 
         <GridElement
-          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Jestem przekonany(a)
           do wykorzystania elearningu"
@@ -78,13 +65,12 @@ const Index = () => {
           link={'/post/cG9zdDo4MTI='}
         />
         <GridElement
-          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Znam rozwiązania do elearningu"
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />
-      </motion.div>
+      </div>
     </MainTemplate>
   )
 }

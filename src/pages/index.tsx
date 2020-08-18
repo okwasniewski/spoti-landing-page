@@ -2,8 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import MainTemplate from 'templates/mainTemplate'
 import GridElement from 'components/gridElement'
-import { motion } from 'framer-motion'
-import { fadeInUp, stagger } from 'utils/animations'
 import Seo from 'components/seo'
 const Index = () => {
   const data = useStaticQuery(graphql`
@@ -45,15 +43,8 @@ const Index = () => {
         pasuje do Państwa)
       </p>
 
-      <motion.div
-        className="mainGridWrapper"
-        variants={stagger}
-        initial="initial"
-        animate="animate"
-        exit={{ opacity: 0 }}
-      >
+      <div className="mainGridWrapper">
         <GridElement
-          variants={fadeInUp}
           fixed={data.SearchingImage.childImageSharp.fixed}
           title="Niewiele wiem o elearningu"
           badge="Szukam informacji"
@@ -62,7 +53,6 @@ const Index = () => {
         />
 
         <GridElement
-          variants={fadeInUp}
           fixed={data.WorkingImage.childImageSharp.fixed}
           title="Jestem przekonany(a)
           do wykorzystania elearningu"
@@ -70,14 +60,13 @@ const Index = () => {
           link={'/krok-2'}
         />
         <GridElement
-          variants={fadeInUp}
           fixed={data.BusinessDeal.childImageSharp.fixed}
           title="Znam rozwiązania do elearningu"
           badge="Potrzebuję konkretów"
           color="#6C63FF"
           link={'/krok-3'}
         />
-      </motion.div>
+      </div>
     </MainTemplate>
   )
 }
