@@ -39,5 +39,17 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '2944315262352576',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-30993742-3',
+      },
+    },
   ],
 }
