@@ -65,7 +65,11 @@ const Index = () => {
       <div className="gridWrapper">
         <GridElement
           fixed={data.ResumeFolder.childImageSharp.fixed}
-          title="Dowiedzieć się jakie doświadczenie ma firma eTechnologie"
+          title={[
+            'Dowiedzieć się jakie doświadczenie',
+            <br></br>,
+            'ma firma eTechnologie',
+          ]}
           color="#dasd"
           link={'/post/cG9zdDo4MTI='}
         />

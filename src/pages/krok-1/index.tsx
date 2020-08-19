@@ -75,7 +75,11 @@ const Index = () => {
 
         <GridElement
           fixed={data.DataTrends.childImageSharp.fixed}
-          title="Poznać najnowsze trendy w elearningu"
+          title={[
+            'Poznać najnowsze trendy',
+            <br className="rwd-break"></br>,
+            'w elearningu.',
+          ]}
           color="#dasd"
           link={'/blog/6-najnowszych-trendow-w-e-learningu-ktore-warto-poznac'}
         />
@@ -89,7 +93,11 @@ const Index = () => {
         />
         <GridElement
           fixed={data.Maintenance.childImageSharp.fixed}
-          title="Dowiedzieć się co jest potrzebne do wdrożenia e-learningu"
+          title={[
+            'Dowiedzieć się co jest potrzebne',
+            <br></br>,
+            'do wdrożenia e-learningu',
+          ]}
           color="#dasd"
           link={
             '/blog/co-jest-potrzebne-do-wdrozenia-e-learningu-szkolen-online-w-firmie'

@@ -82,13 +82,21 @@ const Index = () => {
         />
         <GridElement
           fixed={data.KidsStudying.childImageSharp.fixed}
-          title="Dowiedzieć się jakie szkolenia można tworzyć na platformie e-learningowej Spoti?"
+          title={[
+            'Dowiedzieć się jakie szkolenia można tworzyć na platformie ',
+            <br className="rwd-break"></br>,
+            'e-learningowej Spoti?',
+          ]}
           color="#dasd"
           link={'/blog/jakie-typy-szkolen-mozna-tworzyc-na-platformie-spoti'}
         />
         <GridElement
           fixed={data.PersonalSettings.childImageSharp.fixed}
-          title="Poznać możliwości dostosowania i personalizacji platformy do moich potrzeb"
+          title={[
+            'Poznać możliwości dostosowania ',
+            <br className="rwd-break"></br>,
+            'i personalizacji platformy do moich potrzeb',
+          ]}
           color="#dasd"
           link={
             '/blog/poznaj-mozliwosci-dostosowania-i-personalizacji-platformy-e-learningowej-spoti'
@@ -97,7 +105,11 @@ const Index = () => {
 
         <GridElement
           fixed={data.Preferences.childImageSharp.fixed}
-          title="Dowiedzieć się jakie funkcje powinna posiadać nowoczesna platformą e-learningowa"
+          title={[
+            'Dowiedzieć się jakie funkcje powinna posiadać nowoczesna ',
+            <br></br>,
+            'platforma e-learningowa',
+          ]}
           color="#dasd"
           link={
             '/blog/jakie-cechy-i-funkcje-powinna-posiadac-nowoczesna-platforma-e-learningowa'

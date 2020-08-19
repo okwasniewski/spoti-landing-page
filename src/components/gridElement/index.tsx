@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 type GridElementProps = {
   fixed: any
-  title: string
+  title: any
   badge?: string
   color?: string
   link?: string

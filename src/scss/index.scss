@@ -15,6 +15,7 @@ body {
   height: 100%;
   background-color: #ffffff;
   color: #000000;
+  overflow-x: hidden;
 }
 
 button {
@@ -49,6 +50,20 @@ button {
     text-decoration: none;
   }
 }
+.logoWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.8fr));
+  grid-gap: 20px;
+  justify-content: center;
+  padding-top: 10px;
+  max-width: 1200px;
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .mainbutton {
   background-color: #5b92f9;
   outline: none;
@@ -117,6 +132,11 @@ button {
   text-align: center;
   font-size: 24px;
   color: #3e3e3e;
+}
+@media (max-width: 748px) {
+  .mainSubTitle {
+    padding: 20px;
+  }
 }
 @media (min-width: 748px) {
   .rwd-break {
@@ -233,4 +253,261 @@ nav .breadcrumb__list {
     width: 40%;
   }
   background-color: aliceblue;
+}
+.noMinHeight {
+  min-height: auto;
+  margin: 50px 0px;
+}
+.svgWrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+@media (max-width: 748px) {
+  .buttonWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.fixedWidth {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.featuresWrapper {
+  padding: 5px 40px 40px 40px;
+  background-color: #f7f7f7;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+.testimonialWrapper {
+  margin: 20px 0px;
+  max-width: 100%;
+  padding: 24px 0px 24px 0px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  .slick-slider {
+    width: 800px;
+    max-width: 100%;
+    padding: 20px;
+  }
+  .slick-dots {
+    display: flex !important;
+    list-style-type: none;
+    padding: 0px;
+    justify-content: center;
+    button {
+      margin: 0px 20px;
+      color: black;
+      font-weight: bold;
+      background-color: transparent;
+    }
+  }
+}
+svg#freepik_stories-telecommuting:not(.animated) .animable {
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elrcobtgtpj8 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-telecommuting.animated #eltzoq543njef {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.030303030303030304s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elfs0jv0zxei9 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.06060606060606061s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elwgovdpwdpo9 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.09090909090909091s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #eljk99085ya2s {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.12121212121212122s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #el605r1ic1ynt {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.15151515151515152s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #eln04ywkcdiv {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.18181818181818182s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #el1l9csgmirxe {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.21212121212121213s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elepf39retfvl {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.24242424242424243s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #eluxqewxqkc5e {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.2727272727272727s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elgohhyftsvb {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.30303030303030304s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elaba39ydzyqh {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.33333333333333337s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elwkd490fqje9 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.36363636363636365s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elk0lfmueih {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.3939393939393939s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elrcwfupo0o5s {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.42424242424242425s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elrvdhk9v879b {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.4545454545454546s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elvvfg3ghv0xk {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.48484848484848486s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elm7iom68yfks {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.5151515151515151s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elepp23rvcyt9 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.5454545454545454s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #el68k7bw99heh {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.5757575757575758s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elprjgs89528k {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.6060606060606061s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elppu35z64yp {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.6363636363636364s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #el2p2xojtqn4d {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.6666666666666667s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #el8oeg2kji7me {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.696969696969697s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elm3hzxyh37zl {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.7272727272727273s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #eli9wstxm37d {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.7575757575757576s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elpz5swckeir {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.7878787878787878s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #el0k8wiwah0xva {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.8181818181818182s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #el13limmmczaof {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.8484848484848485s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elx8ieyd48zth {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.8787878787878788s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elwc9o4pydtup {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.9090909090909092s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elt44qtegsys8 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.9393939393939394s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated #elckok7f09pxt {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0.9696969696969697s;
+  opacity: 0;
+}
+svg#freepik_stories-telecommuting.animated
+  #freepik--background-complete--inject-35 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0s;
+}
+svg#freepik_stories-telecommuting.animated #freepik--Desk--inject-35 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideUp;
+  animation-delay: 0s;
+}
+svg#freepik_stories-telecommuting.animated #freepik--Telecommuting--inject-35 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideUp;
+  animation-delay: 0s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: inherit;
+  }
+}
+.animator-hidden {
+  display: none;
 }

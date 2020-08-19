@@ -39,6 +39,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-svg`,
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
