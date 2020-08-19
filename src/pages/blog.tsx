@@ -41,9 +41,9 @@ const Index = () => {
           return (
             <GridElement
               fixed={post.featuredImage.node.localFile.childImageSharp.fixed}
-              title={post.title}
               color="#dasd"
               link={`/blog/${post.slug}`}
+              dangerousTitle={post.title}
             />
           )
         })}

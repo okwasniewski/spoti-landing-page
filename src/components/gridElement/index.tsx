@@ -2,16 +2,15 @@ import React from 'react'
 import Img from 'gatsby-image'
 import './index.scss'
 import { Link } from 'gatsby'
-import { motion } from 'framer-motion'
 type GridElementProps = {
   fixed: any
-  title: any
+  title?: any
   badge?: string
   color?: string
   link?: string
   externalLink?: string
-  variants?: any
   onClick?: any
+  dangerousTitle?: any
 }
 const Index = ({
   fixed,
@@ -20,16 +19,19 @@ const Index = ({
   color,
   link,
   externalLink,
-  variants,
   onClick,
+  dangerousTitle,
 }: GridElementProps) => {
   const BadgeStyles = {
     backgroundColor: color,
   }
+  function createMarkup(content) {
+    return { __html: content }
+  }
   if (link) {
     return (
       <Link to={link}>
-        <motion.div className="gridElement" variants={variants}>
+        <div className="gridElement">
           {badge?.length > 0 ? (
             <div className="gridElement__badgeWrapper" style={BadgeStyles}>
               <p>{badge}</p>
@@ -39,14 +41,21 @@ const Index = ({
           <div className="gridElement__ImgWrapper">
             <Img fixed={fixed} />
           </div>
-          <h4 className="gridElement__title">{title}</h4>
-        </motion.div>
+          <h4
+            className="gridElement__title"
+            dangerouslySetInnerHTML={
+              dangerousTitle ? createMarkup(dangerousTitle) : null
+            }
+          >
+            {title}
+          </h4>
+        </div>
       </Link>
     )
   } else if (externalLink) {
     return (
       <a href={externalLink} target="__blank" rel="noopener">
-        <motion.div variants={variants} className="gridElement">
+        <div className="gridElement">
           {badge?.length > 0 ? (
             <div className="gridElement__badgeWrapper">
               <p>{badge}</p>
@@ -57,12 +66,12 @@ const Index = ({
             <Img fixed={fixed} />
           </div>
           <h4 className="gridElement__title">{title}</h4>
-        </motion.div>
+        </div>
       </a>
     )
   } else {
     return (
-      <motion.div variants={variants} className="gridElement" onClick={onClick}>
+      <div className="gridElement" onClick={onClick}>
         {badge?.length > 0 ? (
           <div className="gridElement__badgeWrapper">
             <p>{badge}</p>
@@ -73,7 +82,7 @@ const Index = ({
           <Img fixed={fixed} />
         </div>
         <h4 className="gridElement__title">{title}</h4>
-      </motion.div>
+      </div>
     )
   }
 }

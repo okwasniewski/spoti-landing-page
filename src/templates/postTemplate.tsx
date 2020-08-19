@@ -24,14 +24,14 @@ export const PostQuery = graphql`
   }
 `
 const PostTemplate = ({ data: { wpPost } }) => {
-  function createMarkup() {
-    return { __html: wpPost.content }
+  function createMarkup(content) {
+    return { __html: content }
   }
-  console.log(wpPost)
+  const seoTitle = wpPost.title.replace(/(<|&lt;)br\s*\/*(>|&gt;)/g, '')
   return (
     <MainTemplate>
       <Seo
-        pageTitle={wpPost.title}
+        pageTitle={seoTitle}
         description="Poznaj platformę e-learningową Spoti"
       />
 
@@ -39,7 +39,10 @@ const PostTemplate = ({ data: { wpPost } }) => {
         <button className="mainbutton backButton" onClick={() => navigate(-1)}>
           <FaArrowLeft /> Wróć
         </button>
-        <h1 className="post__title">{wpPost.title}</h1>
+        <h1
+          className="post__title"
+          dangerouslySetInnerHTML={createMarkup(wpPost.title)}
+        ></h1>
         <div className="post__featuredImage">
           {wpPost?.featuredImage?.node?.localFile ? (
             <Img
@@ -49,7 +52,7 @@ const PostTemplate = ({ data: { wpPost } }) => {
             ''
           )}
         </div>
-        <div dangerouslySetInnerHTML={createMarkup()}></div>
+        <div dangerouslySetInnerHTML={createMarkup(wpPost.content)}></div>
       </div>
     </MainTemplate>
   )
