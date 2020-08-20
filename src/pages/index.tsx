@@ -171,7 +171,7 @@ const Index = () => {
       <div className="featuresWrapper">
         <h2 className="mainTitle">
           Najczęściej spotykane scenariusze wykorzystania platformy
-          <br className="rwd-break"></br>
+          <br></br>
           e-learningowej
         </h2>
         <div className="gridWrapper fixedWidth">
