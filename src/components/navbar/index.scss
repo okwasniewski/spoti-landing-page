@@ -23,12 +23,13 @@
       z-index: 99999;
     }
   }
-  @media (max-width: 748px) {
-    &__ButtonInnerWrapper button {
+  @media (max-width: 900px) {
+    &__ButtonInnerWrapper button,
+    .menuLink {
       display: none;
     }
   }
-  @media (min-width: 748px) {
+  @media (min-width: 900px) {
     &__ButtonInnerWrapper svg {
       display: none;
     }

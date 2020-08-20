@@ -4,6 +4,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import BurgerMenu from 'components/burgerMenu'
 import { FaBars } from 'react-icons/fa'
+import NavLink from 'gatsby-link'
 const Index = () => {
   const HandleBurger = () => {
     const burger = document.querySelector('.burgerWrapper')
@@ -28,6 +29,27 @@ const Index = () => {
             <Img fixed={LogoData.file.childImageSharp.fixed} />
           </Link>
           <div className="navbar__ButtonInnerWrapper">
+            <NavLink
+              className="menuLink"
+              activeClassName="menuLinkActive"
+              to={'/krok-1'}
+            >
+              Szukam informacji
+            </NavLink>
+            <NavLink
+              className="menuLink"
+              activeClassName="menuLinkActive"
+              to={'/krok-2'}
+            >
+              Szukam rozwiązania
+            </NavLink>
+            <NavLink
+              className="menuLink"
+              activeClassName="menuLinkActive"
+              to={'/krok-3'}
+            >
+              Potrzebuję konretów
+            </NavLink>
             <button className="mainbutton unfilled">
               <a href="https://spoti.com.pl" target="__blank" rel="noopener">
                 Zobacz demo
@@ -38,6 +60,7 @@ const Index = () => {
                 Umów prezentację
               </a>
             </button>
+
             <FaBars onClick={HandleBurger} />
           </div>
         </div>

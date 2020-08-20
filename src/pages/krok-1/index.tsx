@@ -76,16 +76,16 @@ const Index = () => {
         <GridElement
           fixed={data.DataTrends.childImageSharp.fixed}
           title={[
-            'Poznać najnowsze trendy',
+            'Poznać najnowsze trendy ',
             <br className="rwd-break"></br>,
-            'w elearningu.',
+            'w elearningu',
           ]}
           color="#dasd"
           link={'/blog/6-najnowszych-trendow-w-e-learningu-ktore-warto-poznac'}
         />
         <GridElement
           fixed={data.Questions.childImageSharp.fixed}
-          title="Poznać 9 najczęściej zadawanych pytań dotyczących e-learningu."
+          title="Poznać 9 najczęściej zadawanych pytań dotyczących e-learningu"
           color="#dasd"
           link={
             '/blog/9-najczesciej-zadawanych-pytan-dotyczacych-e-learningu-i-platformy-spoti'
@@ -107,7 +107,7 @@ const Index = () => {
         <GridElement
           fixed={data.Company.childImageSharp.fixed}
           title="Dowiedzieć się, w jaki sposób platforma Spoti zwiększa 
-          efektywność zespołu."
+          efektywność zespołu"
           color="#dasd"
           link={
             '/blog/w-jaki-sposob-platforma-e-learningowa-spoti-zwieksza-efektywnosc-zespolu'

@@ -26,6 +26,10 @@ button {
   color: white;
   border-radius: 16px;
   cursor: pointer;
+  font-weight: 600;
+  max-height: 40px;
+  margin: 5px;
+  transition: 0.3s;
 }
 
 .main {
@@ -184,6 +188,23 @@ button {
     text-align: center;
     font-weight: 500;
   }
+  .postCTA {
+    margin: 10px 0px;
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    h3 {
+      padding: 20px;
+      text-align: left;
+    }
+    button {
+      width: 50%;
+    }
+    background-color: aliceblue;
+  }
   @media (max-width: 748px) {
     .wp-block-embed-youtube {
       width: 100%;
@@ -237,22 +258,6 @@ nav .breadcrumb__list {
   }
 }
 
-.postCTA {
-  padding: 10px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  h3 {
-    padding: 20px;
-    text-align: left;
-  }
-  button {
-    width: 40%;
-  }
-  background-color: aliceblue;
-}
 .noMinHeight {
   min-height: auto;
   margin: 50px 0px;
@@ -309,6 +314,31 @@ nav .breadcrumb__list {
     }
   }
 }
+
+.menuLink {
+  transition: 0.3s;
+  font-weight: 500;
+  margin: 2px;
+  text-decoration: none;
+  padding: 0px 8px;
+  font-size: 14px;
+  color: #3e3e3e;
+  &:hover {
+    color: #5b92f9;
+  }
+}
+@media (max-width: 900px) {
+  .menuLink {
+    padding: 14px 8px;
+    font-size: 16px;
+  }
+}
+
+.menuLinkActive {
+  color: #5b92f9;
+  font-weight: 600;
+}
+
 svg#freepik_stories-telecommuting:not(.animated) .animable {
   opacity: 0;
 }

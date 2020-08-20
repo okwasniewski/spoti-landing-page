@@ -94,7 +94,7 @@ const Index = () => {
           fixed={data.PersonalSettings.childImageSharp.fixed}
           title={[
             'Poznać możliwości dostosowania ',
-            <br className="rwd-break"></br>,
+            <br></br>,
             'i personalizacji platformy do moich potrzeb',
           ]}
           color="#dasd"

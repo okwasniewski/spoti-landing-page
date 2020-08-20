@@ -1,9 +1,30 @@
 import React from 'react'
 import './index.scss'
-
+import NavLink from 'gatsby-link'
 const Index = () => {
   return (
     <div className="burgerWrapper">
+      <NavLink
+        className="menuLink"
+        activeClassName="menuLinkActive"
+        to={'/krok-1'}
+      >
+        Szukam informacji
+      </NavLink>
+      <NavLink
+        className="menuLink"
+        activeClassName="menuLinkActive"
+        to={'/krok-2'}
+      >
+        Szukam rozwiązania
+      </NavLink>
+      <NavLink
+        className="menuLink"
+        activeClassName="menuLinkActive"
+        to={'/krok-3'}
+      >
+        Potrzebuję konretów
+      </NavLink>
       <button className="mainbutton unfilled">
         <a href="https://spoti.com.pl" target="__blank" rel="noopener">
           Zobacz demo
