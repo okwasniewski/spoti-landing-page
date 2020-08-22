@@ -64,3 +64,5 @@ yarn-error.log
 README.html
 WordPress
 .wordpress-cache
+
+.DS_Store
