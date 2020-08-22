@@ -11,8 +11,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-remove-trailing-slashes`,
-
     {
       resolve: `gatsby-source-wordpress-experimental`,
       options: {
