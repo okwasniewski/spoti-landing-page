@@ -9,6 +9,7 @@ const Index = () => {
       allWpPost {
         nodes {
           slug
+          id
           title
           featuredImage {
             node {
@@ -40,6 +41,7 @@ const Index = () => {
         {allWpPost.nodes.map((post) => {
           return (
             <GridElement
+              key={post.id}
               fixed={post.featuredImage.node.localFile.childImageSharp.fixed}
               color="#dasd"
               link={`/blog/${post.slug}`}

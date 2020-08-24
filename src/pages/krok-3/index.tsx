@@ -84,7 +84,9 @@ const Index = () => {
           fixed={data.RevenueRafiki.childImageSharp.fixed}
           title="Zapoznać się z ofertą cenową"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          externalLink={
+            'https://etechnologie.pl/platforma-elearningowa/cennik-dzierzawy/'
+          }
         />
         <GridElement
           fixed={data.Typing.childImageSharp.fixed}
