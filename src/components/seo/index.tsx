@@ -1,7 +1,13 @@
 import React from 'react'
 import Hemlet from 'react-helmet'
 import useSiteMetadata from 'hooks/use-site-metadata'
-const Index = ({ pageTitle, description }) => {
+
+type SEOTypes = {
+  pageTitle: string
+  description: string
+  canonical?: string
+}
+const Index = ({ pageTitle, description, canonical }: SEOTypes) => {
   const { siteUrl, title } = useSiteMetadata()
   const href = `${siteUrl}${pageTitle}`
   return (
@@ -13,7 +19,11 @@ const Index = ({ pageTitle, description }) => {
       />
       <title>{`${title} - ${pageTitle}`}</title>
       <meta name="description" content={description} />
-
+      {canonical ? (
+        <link rel="canonical" href={`https://etechnologie.pl/${canonical}`} />
+      ) : (
+        ''
+      )}
       {/* OpenGraph tags */}
       <meta property="og:url" content={href} />
       <meta property="og:type" content="website" />

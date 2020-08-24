@@ -68,9 +68,7 @@ const Index = () => {
           fixed={data.Rising.childImageSharp.fixed}
           title="Poznać korzyści z zastosowania elearningu"
           color="#dasd"
-          link={
-            '/blog/co-to-jest-platforma-elearningowa-i-jakie-sa-korzysci-z-wykorzystania-w-firmie'
-          }
+          link={'/blog/co-to-jest-platforma-e-learningowa'}
         />
 
         <GridElement
@@ -81,15 +79,13 @@ const Index = () => {
             'w elearningu',
           ]}
           color="#dasd"
-          link={'/blog/6-najnowszych-trendow-w-e-learningu-ktore-warto-poznac'}
+          link={'/blog/6-najnowszych-trendow-e-learningu'}
         />
         <GridElement
           fixed={data.Questions.childImageSharp.fixed}
           title="Poznać 9 najczęściej zadawanych pytań dotyczących e-learningu"
           color="#dasd"
-          link={
-            '/blog/9-najczesciej-zadawanych-pytan-dotyczacych-e-learningu-i-platformy-spoti'
-          }
+          link={'/blog/najczesciej-zadawane-pytania-dotyczace-elearningu'}
         />
         <GridElement
           fixed={data.Maintenance.childImageSharp.fixed}
@@ -99,9 +95,7 @@ const Index = () => {
             'do wdrożenia e-learningu',
           ]}
           color="#dasd"
-          link={
-            '/blog/co-jest-potrzebne-do-wdrozenia-e-learningu-szkolen-online-w-firmie'
-          }
+          link={'/blog/co-jest-potrzebne-do-wdrozenia-e-learningu'}
         />
 
         <GridElement
@@ -109,9 +103,7 @@ const Index = () => {
           title="Dowiedzieć się, w jaki sposób platforma Spoti zwiększa 
           efektywność zespołu"
           color="#dasd"
-          link={
-            '/blog/w-jaki-sposob-platforma-e-learningowa-spoti-zwieksza-efektywnosc-zespolu'
-          }
+          link={'/blog/poprawa-efektywnosci-szkolen'}
         />
         <GridElement
           fixed={data.Telecommuting.childImageSharp.fixed}

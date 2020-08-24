@@ -78,7 +78,7 @@ const Index = () => {
           fixed={data.FeaturesOverview.childImageSharp.fixed}
           title="Poznać możliwości platformy Spoti"
           color="#dasd"
-          link={'/blog/nowe-funkcje-i-mozliwosci-na-platformie-spoti'}
+          link={'/blog/nowe-funkcje-na-platformie-spoti'}
         />
         <GridElement
           fixed={data.KidsStudying.childImageSharp.fixed}
@@ -88,7 +88,7 @@ const Index = () => {
             'e-learningowej Spoti?',
           ]}
           color="#dasd"
-          link={'/blog/jakie-typy-szkolen-mozna-tworzyc-na-platformie-spoti'}
+          link={'/blog/typy-szkolen-na-platformie-e-learningowej'}
         />
         <GridElement
           fixed={data.PersonalSettings.childImageSharp.fixed}
@@ -98,9 +98,7 @@ const Index = () => {
             'i personalizacji platformy do moich potrzeb',
           ]}
           color="#dasd"
-          link={
-            '/blog/poznaj-mozliwosci-dostosowania-i-personalizacji-platformy-e-learningowej-spoti'
-          }
+          link={'/blog/personalizacja-platformy-spoti'}
         />
 
         <GridElement

@@ -9,6 +9,7 @@ export const PostQuery = graphql`
     wpPost(id: { eq: $PostID }) {
       content
       title
+      slug
       featuredImage {
         node {
           localFile {
@@ -33,6 +34,7 @@ const PostTemplate = ({ data: { wpPost } }) => {
       <Seo
         pageTitle={seoTitle}
         description="Poznaj platformę e-learningową Spoti"
+        canonical={wpPost.slug}
       />
 
       <div className="post">

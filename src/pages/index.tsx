@@ -210,7 +210,7 @@ w formie e-learningu zwraca się bardzo szybko."
             title={[
               'Autoryzacje dla dilerów',
               <br className="rwd-break"></br>,
-              'i partnerów',
+              ' i partnerów',
             ]}
             content="Doceniaj i motywuj najbardziej aktywnych partnerów handlowych. Ich wiedza bezpośrednio przekłada się na wysokość Twojej sprzedaży."
           >
