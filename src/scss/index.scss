@@ -14,7 +14,6 @@ body {
   height: 100%;
   background-color: #ffffff;
   color: #000000;
-  overflow-x: hidden;
 }
 
 button {
@@ -53,6 +52,7 @@ button {
     text-decoration: none;
   }
 }
+
 .logoWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 0.8fr));

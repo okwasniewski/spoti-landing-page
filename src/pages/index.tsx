@@ -174,7 +174,7 @@ const Index = () => {
           <br></br>
           e-learningowej
         </h2>
-        <div className="gridWrapper fixedWidth">
+        <div className="gridWrapper fixedWidth noMinHeight">
           <FeaturesElement
             title="Szkolenia z norm i przepisów np. RODO, BHP, ISO"
             content="To szkolenia, które muszą odbywać się cyklicznie z tego powodu wdrożenie ich

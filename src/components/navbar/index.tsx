@@ -48,7 +48,7 @@ const Index = () => {
               activeClassName="menuLinkActive"
               to={'/krok-3'}
             >
-              Potrzebuję konretów
+              Potrzebuję konkretów
             </NavLink>
             <button className="mainbutton unfilled">
               <a href="https://spoti.com.pl" target="__blank" rel="noopener">
