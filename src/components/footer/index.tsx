@@ -6,9 +6,9 @@ const Index = () => {
   const Year = new Date().getFullYear()
   const LogoData = useStaticQuery(graphql`
     {
-      footerImage: file(relativePath: { eq: "logo.png" }) {
+      footerImage: file(relativePath: { eq: "logo-etechnologie.png" }) {
         childImageSharp {
-          fixed(width: 90) {
+          fixed(width: 120) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
@@ -26,9 +26,14 @@ const Index = () => {
     <footer className="footer">
       <div className="footer__innerWrapper">
         <div className="footer__logoWrapper">
-          <Img fixed={LogoData.footerImage.childImageSharp.fixed} />
+          <a href="https://etechnologie.pl/" target="__blank" rel="noopener">
+            <Img fixed={LogoData.footerImage.childImageSharp.fixed} />
+          </a>
+
           <p className="footer__year">
-            © {Year} -
+            © {Year} - Spoti jest e-learningową platformą demonstracyjną
+            <br></br>
+            przygotowaną przez <span> </span>
             <a href="https://etechnologie.pl/" target="__blank" rel="noopener">
               eTechnologie Sp. z o.o.
             </a>

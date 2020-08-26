@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import MainTemplate from 'templates/mainTemplate'
 import GridElement from 'components/gridElement'
@@ -13,10 +13,12 @@ import {
   FaTag,
   FaFileArchive,
   FaSearch,
+  FaCheck,
 } from 'react-icons/fa'
 import 'slick-carousel/slick/slick.css'
 import Slider from 'react-slick'
 import TestimonialElement from 'components/testiminalElement'
+import ModalVideo from 'react-modal-video'
 const Index = () => {
   const settings = {
     dots: true,
@@ -135,6 +137,7 @@ const Index = () => {
       }
     }
   `)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   return (
     <MainTemplate>
       <Seo
@@ -148,9 +151,29 @@ const Index = () => {
       <p className="mainSubTitle">
         Wszystko co jest potrzebne do prowadzenia szkoleń w internecie
       </p>
-      <div className="svgWrapper">
-        <Telecommuting />
+      <div className="TopTwoColumns">
+        <div onClick={() => setIsOpen(true)} className="svgWrapper">
+          <Telecommuting />
+        </div>
+        <div className="rightColumn">
+          <ul>
+            <li>
+              <FaCheck /> <p>platforma e-learningowa,</p>
+            </li>
+            <li>
+              <FaCheck />
+              <p>intuicyjne kreatory do tworzenia szkoleń, testów i quizów,</p>
+            </li>
+            <li>
+              <FaCheck /> <p>przejrzysty panel do raportowania postępów,</p>
+            </li>
+            <li>
+              <FaCheck /> <p>odpowiedni serwer i stała pomoc techniczna.</p>
+            </li>
+          </ul>
+        </div>
       </div>
+
       <div className="buttonWrapper">
         <button className="mainbutton">
           <a
@@ -335,6 +358,12 @@ w formie e-learningu zwraca się bardzo szybko."
           <Img fixed={data.InterTeam.childImageSharp.fixed} />
         </a>
       </div>
+      <ModalVideo
+        channel="youtube"
+        isOpen={isOpen}
+        videoId="H4mbVJGN8wM"
+        onClose={() => setIsOpen(false)}
+      />
     </MainTemplate>
   )
 }
