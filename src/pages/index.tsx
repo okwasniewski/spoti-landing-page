@@ -149,7 +149,7 @@ const Index = () => {
         <span>S</span>poti<span>*</span>
       </h1>
       <p className="mainSubTitle">
-        Wszystko co jest potrzebne do prowadzenia szkoleń w internecie
+        Wszystko co jest potrzebne do prowadzenia szkoleń w internecie:
       </p>
       <div className="TopTwoColumns">
         <div onClick={() => setIsOpen(true)} className="svgWrapper">

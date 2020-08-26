@@ -357,9 +357,12 @@ nav .breadcrumb__list {
 .featuresWrapper {
   padding: 5px 40px 40px 40px;
   background-color: #f7f7f7;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 99.5vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 .testimonialWrapper {
   margin: 20px 0px;
