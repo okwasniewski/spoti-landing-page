@@ -71,14 +71,16 @@ const Index = () => {
             'ma firma eTechnologie',
           ]}
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={'/blog/jakie-doswiadczenie-ma-firma-etechnologie/'}
         />
 
         <GridElement
           fixed={data.PieChart.childImageSharp.fixed}
           title="Dowiedzieć się dlaczego warto skorzystać właśnie z oferty eTechnologie"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          link={
+            '/blog/dlaczego-klienci-wybieraja-platforme-e-learningowa-spoti'
+          }
         />
         <GridElement
           fixed={data.RevenueRafiki.childImageSharp.fixed}
@@ -92,7 +94,9 @@ const Index = () => {
           fixed={data.Typing.childImageSharp.fixed}
           title="Skorzystać z 30 dniowej bezpłatnej wersji testowej"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          externalLink={
+            'https://etechnologie.pl/ankieta/formularz-zgloszeniowy-o-demo-platformy-spoti/36/'
+          }
         />
 
         <GridElement
@@ -105,7 +109,7 @@ const Index = () => {
           fixed={data.Agreement.childImageSharp.fixed}
           title="Podpisać umowę"
           color="#dasd"
-          link={'/post/cG9zdDo4MTI='}
+          externalLink={'https://spoti.com.pl/kontakt-z-nami/'}
         />
       </div>
     </MainTemplate>
