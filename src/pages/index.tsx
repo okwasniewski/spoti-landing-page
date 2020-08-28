@@ -272,32 +272,30 @@ w formie e-learningu zwraca się bardzo szybko."
           link={'/krok-3'}
         />
       </div>
-      <div className="featuresWrapper">
-        <div className="testimonialWrapper">
-          <h2 className="mainTitle">Opinie naszych klientów</h2>
-          <Slider {...settings}>
-            <TestimonialElement
-              content="Z przyjemnością potwierdzam, że powierzone prace zostały wykonane profesjonalnie, w uzgodnionym terminie, z należytą starannością oraz zgodnie z oczekiwaniami Zamawiającego."
-              name="Wojciech Michota - Z-ca Dyrektora Departamentu Służby Cywilnej"
-              jobTitle="Kancelaria Prezesa Rady Ministrów"
-            />
-            <TestimonialElement
-              content="Dyrekcja Wolińskiego Parku Narodowego z przyjemnością potwierdza, że firma eTechnologie Sp. z o.o. zaprojektowała i wykonała interaktywną grę edukacyjną. Rekomendujemy eTechnologie Sp. z o.o. jako rzetelnego wykonawcę."
-              name="Arleta Siarkiewicz Hoszowska - Dyrektor"
-              jobTitle="Woliński Park Narodowy"
-            />
-            <TestimonialElement
-              content="Potwierdzamy. że eTechnologie. wdrożyła dla naszej Fundacji platformę e-learningową, umożliwiającą prowadzenie szkoleń w internecie. Rekomendujemy firmę jaka rzetelnego wykonawcę rozwiązań związanych z wdrożeniem nowoczesnego e-learningu."
-              name="Dominik Górski - Dyrektor"
-              jobTitle="Fundacja Rozwoju Demokracji Lokalnej"
-            />
-            <TestimonialElement
-              content="Potwierdzamy, że powierzone prace zostały wykonane z należytą starannością i tym samym rekomendujemy współpracę z firmę eTechnologie Sp. z o.o."
-              name="Jacek Madej - Główny Menedżer ds. Projektów Innowacyjnych"
-              jobTitle="Polska Fundacja Przedsiębiorczości"
-            />
-          </Slider>
-        </div>
+      <div className="testimonialWrapper">
+        <h2 className="mainTitle">Opinie naszych klientów</h2>
+        <Slider {...settings}>
+          <TestimonialElement
+            content="Z przyjemnością potwierdzam, że powierzone prace zostały wykonane profesjonalnie, w uzgodnionym terminie, z należytą starannością oraz zgodnie z oczekiwaniami Zamawiającego."
+            name="Wojciech Michota - Z-ca Dyrektora Departamentu Służby Cywilnej"
+            jobTitle="Kancelaria Prezesa Rady Ministrów"
+          />
+          <TestimonialElement
+            content="Dyrekcja Wolińskiego Parku Narodowego z przyjemnością potwierdza, że firma eTechnologie Sp. z o.o. zaprojektowała i wykonała interaktywną grę edukacyjną. Rekomendujemy eTechnologie Sp. z o.o. jako rzetelnego wykonawcę."
+            name="Arleta Siarkiewicz Hoszowska - Dyrektor"
+            jobTitle="Woliński Park Narodowy"
+          />
+          <TestimonialElement
+            content="Potwierdzamy. że eTechnologie. wdrożyła dla naszej Fundacji platformę e-learningową, umożliwiającą prowadzenie szkoleń w internecie. Rekomendujemy firmę jaka rzetelnego wykonawcę rozwiązań związanych z wdrożeniem nowoczesnego e-learningu."
+            name="Dominik Górski - Dyrektor"
+            jobTitle="Fundacja Rozwoju Demokracji Lokalnej"
+          />
+          <TestimonialElement
+            content="Potwierdzamy, że powierzone prace zostały wykonane z należytą starannością i tym samym rekomendujemy współpracę z firmę eTechnologie Sp. z o.o."
+            name="Jacek Madej - Główny Menedżer ds. Projektów Innowacyjnych"
+            jobTitle="Polska Fundacja Przedsiębiorczości"
+          />
+        </Slider>
       </div>
       <h2 className="mainTitle">Z naszej platformy korzystają m. in.:</h2>
       <div className="logoWrapper">

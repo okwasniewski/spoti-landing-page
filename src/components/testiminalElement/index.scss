@@ -1,8 +1,30 @@
 .testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 8px 20px;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05);
+  border: 1px solid #dddddd;
+  svg {
+    color: #5b92f9;
+    font-size: 45px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
   &__content {
     font-size: 20px;
+    text-align: center;
   }
   &__name {
     margin: 0px;
+    text-align: center;
+  }
+  &__jobTitle {
+    text-align: center;
+  }
+  &__svgWrapper {
+    display: flex;
+    justify-content: center;
   }
 }
