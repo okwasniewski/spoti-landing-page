@@ -259,7 +259,7 @@ w formie e-learningu zwraca się bardzo szybko."
           title={[
             'Jestem przekonany(a)',
             <br className="rwd-break"></br>,
-            'do wykorzystania elearningu',
+            ' do wykorzystania elearningu',
           ]}
           badge="Szukam rozwiązania"
           link={'/krok-2'}

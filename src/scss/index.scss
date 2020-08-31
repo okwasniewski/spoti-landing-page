@@ -74,7 +74,7 @@ button:hover {
 }
 .TopTwoColumns {
   display: flex;
-  height: 40vh;
+  min-height: 40vh;
   width: 100%;
   justify-content: center;
   svg {
