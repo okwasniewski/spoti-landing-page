@@ -27,4 +27,14 @@
     display: flex;
     justify-content: center;
   }
+  @media (max-width: 748px) {
+    &__content {
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 748px) {
+  .testimonial {
+    margin: 0px 3px;
+  }
 }

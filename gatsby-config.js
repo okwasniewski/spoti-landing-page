@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Spoti`,
-    siteUrl: `https://spoti.vercel.app`,
+    siteUrl: `https://start.spoti.com.pl/`,
     description: `Poznaj platformę e-learningową Spoti`,
     facebook: `@spoti.elearning`,
   },

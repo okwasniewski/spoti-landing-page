@@ -10,6 +10,23 @@ export const PostQuery = graphql`
       content
       title
       slug
+      seo {
+        metaDesc
+        metaKeywords
+        title
+        opengraphDescription
+        opengraphTitle
+        opengraphSiteName
+        opengraphImage {
+          localFile {
+            childImageSharp {
+              fixed {
+                ...GatsbyImageSharpFixed_withWebp
+              }
+            }
+          }
+        }
+      }
       featuredImage {
         node {
           localFile {
@@ -32,9 +49,16 @@ const PostTemplate = ({ data: { wpPost } }) => {
   return (
     <MainTemplate>
       <Seo
-        pageTitle={seoTitle}
-        description="Poznaj platformę e-learningową Spoti"
-        canonical={wpPost.slug}
+        pageTitle={wpPost?.seo?.title ? wpPost?.seo?.title : seoTitle}
+        description={
+          wpPost?.seo?.metaDesc
+            ? wpPost?.seo?.metaDesc
+            : 'Platforma e-learningowa Spoti'
+        }
+        canonical={wpPost?.slug}
+        keywords={wpPost?.seo?.metaKeywords}
+        slug={wpPost?.slug}
+        ogImage={wpPost.featuredImage.node.localFile.childImageSharp.fixed.src}
       />
 
       <div className="post">
