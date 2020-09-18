@@ -20,8 +20,8 @@ export const PostQuery = graphql`
         opengraphImage {
           localFile {
             childImageSharp {
-              fixed {
-                ...GatsbyImageSharpFixed_withWebp
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
