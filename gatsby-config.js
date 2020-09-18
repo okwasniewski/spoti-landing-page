@@ -1,3 +1,5 @@
+require('dotenv').config({path: `.env`})
+
 module.exports = {
   siteMetadata: {
     title: `Spoti`,
@@ -47,7 +49,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-30993742-3',
+        trackingId: process.env.GOOGLE_ANALITICS_ID,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: process.env.HOTJAR_ID,
+        sv: 6,
       },
     },
   ],
