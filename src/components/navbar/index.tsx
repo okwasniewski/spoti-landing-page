@@ -50,16 +50,22 @@ const Index = () => {
             >
               Potrzebuję konkretów
             </NavLink>
-            <button className="mainbutton unfilled">
-              <a href="https://spoti.com.pl" target="__blank" rel="noopener">
-                Zobacz demo
-              </a>
-            </button>
-            <button className="mainbutton">
-              <a href="https://bit.ly/2NZ7VNw" target="__blank" rel="noopener">
-                Umów prezentację
-              </a>
-            </button>
+            <a
+              className="mainbutton unfilled"
+              href="https://spoti.com.pl"
+              target="__blank"
+              rel="noopener"
+            >
+              Zobacz demo
+            </a>
+            <a
+              className="mainbutton"
+              href="https://bit.ly/2NZ7VNw"
+              target="__blank"
+              rel="noopener"
+            >
+              Umów prezentację
+            </a>
 
             <FaBars onClick={HandleBurger} />
           </div>

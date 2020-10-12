@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import MainTemplate from 'templates/mainTemplate'
 import GridElement from 'components/gridElement'
 import Seo from 'components/seo'
 import Img from 'gatsby-image'
-import Telecommuting from 'animations/telecommuting.svg'
 import FeaturesElement from 'components/featuresElement'
 import {
   FaReply,
@@ -18,7 +17,7 @@ import {
 import 'slick-carousel/slick/slick.css'
 import Slider from 'react-slick'
 import TestimonialElement from 'components/testiminalElement'
-import ModalVideo from 'react-modal-video'
+import YouTube from 'react-youtube'
 const Index = () => {
   const settings = {
     dots: true,
@@ -41,6 +40,33 @@ const Index = () => {
         },
       },
     ],
+  }
+  const topSettings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    autoplay: true,
+    focusOnSelect: true,
+    adaptiveHeight: true,
+    arrows: false,
+    centerPadding: '80px',
+
+    responsive: [
+      {
+        breakpoint: 748,
+        centerPadding: '10px',
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }
+  const opts = {
+    height: '260',
+    width: '450',
   }
   const data = useStaticQuery(graphql`
     {
@@ -137,7 +163,7 @@ const Index = () => {
       }
     }
   `)
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  // const [isOpen, setIsOpen] = useState<boolean>(false)
   return (
     <MainTemplate>
       <Seo
@@ -152,20 +178,36 @@ const Index = () => {
         Wszystko co jest potrzebne do prowadzenia szkoleń w internecie:
       </p>
       <div className="TopTwoColumns">
-        <div onClick={() => setIsOpen(true)} className="svgWrapper">
-          <Telecommuting />
+        <div className="yt_wrapper">
+          <YouTube opts={opts} videoId="H4mbVJGN8wM" />
         </div>
         <div className="rightColumn">
           <ul>
             <li>
-              <FaCheck /> <p>platforma e-learningowa,</p>
+              <FaCheck />{' '}
+              <a href="https://spoti.com.pl/" target="__blank" rel="noopener">
+                platforma e-learningowa,
+              </a>
             </li>
             <li>
               <FaCheck />
-              <p>intuicyjne kreatory do tworzenia szkoleń, testów i quizów,</p>
+              <a
+                href="https://spoti.com.pl/zagadnienia/1-tworzenie-struktury-szkolenia/"
+                target="__blank"
+                rel="noopener"
+              >
+                intuicyjne kreatory do tworzenia szkoleń, testów i quizów,
+              </a>
             </li>
             <li>
-              <FaCheck /> <p>przejrzysty panel do raportowania postępów,</p>
+              <FaCheck />{' '}
+              <a
+                href="https://spoti.com.pl/tematy/omowienie-sposobow-raportowania/"
+                target="__blank"
+                rel="noopener"
+              >
+                przejrzysty panel do raportowania postępów,
+              </a>
             </li>
             <li>
               <FaCheck /> <p>odpowiedni serwer i stała pomoc techniczna.</p>
@@ -175,22 +217,115 @@ const Index = () => {
       </div>
 
       <div className="buttonWrapper">
-        <button className="mainbutton">
+        <a
+          href="https://etechnologie.pl/platforma-elearningowa/cennik-dzierzawy/"
+          target="__blank"
+          rel="noopener"
+          className="mainbutton"
+        >
+          Plany i cennik
+        </a>
+        <a
+          className="mainbutton"
+          href="https://bit.ly/2NZ7VNw"
+          target="__blank"
+          rel="noopener"
+        >
+          Umów się na prezentacje
+        </a>
+      </div>
+      <h2 className="mainTitle">Z naszej platformy korzystają m. in.:</h2>
+      <div className="logoWrapper">
+        <Slider {...topSettings}>
           <a
-            href="https://etechnologie.pl/platforma-elearningowa/cennik-dzierzawy/"
+            href="https://etechnologie.pl/nasze-prace/certes/"
             target="__blank"
             rel="noopener"
           >
-            Plany i cennik
+            <Img fixed={data.Certes.childImageSharp.fixed} />
           </a>
-        </button>
-        <button className="mainbutton">
-          <a href="https://bit.ly/2NZ7VNw" target="__blank" rel="noopener">
-            Umów się na prezentacje
+          <a
+            href="https://etechnologie.pl/nasze-prace/jbb-team/"
+            target="__blank"
+            rel="noopener"
+          >
+            <Img fixed={data.JBB.childImageSharp.fixed} />
           </a>
-        </button>
+          <a
+            href="https://etechnologie.pl/nasze-prace/elzab/"
+            target="__blank"
+            rel="noopener"
+          >
+            <Img fixed={data.Elzab.childImageSharp.fixed} />
+          </a>
+          <a
+            href="https://etechnologie.pl/nasze-prace/get-it/"
+            target="__blank"
+            rel="noopener"
+          >
+            <Img fixed={data.Getit.childImageSharp.fixed} />
+          </a>
+          <a
+            href="https://etechnologie.pl/nasze-prace/semahead/"
+            target="__blank"
+            rel="noopener"
+          >
+            <Img fixed={data.Semahead.childImageSharp.fixed} />
+          </a>
+          <a
+            href="https://etechnologie.pl/nasze-prace/platforma-e-learningowa-dla-zachodniopomorskiej-inspekcji-weterynaryjnej-w-szczecinie/"
+            target="__blank"
+            rel="noopener"
+          >
+            <Img fixed={data.ZIW.childImageSharp.fixed} />
+          </a>
+          <a
+            href="https://etechnologie.pl/nasze-prace/tenzi/"
+            target="__blank"
+            rel="noopener"
+          >
+            <Img fixed={data.Tenzi.childImageSharp.fixed} />
+          </a>
+          <a
+            href="https://etechnologie.pl/nasze-prace/inter-team/"
+            target="__blank"
+            rel="noopener"
+          >
+            <Img fixed={data.InterTeam.childImageSharp.fixed} />
+          </a>
+        </Slider>
       </div>
+      <h2 className="mainTitle">W jaki sposób możemy pomóc?</h2>
+      <p className="mainHelper">
+        (Proszę zaznaczyć opis, który najlepiej pasuje do Państwa)
+      </p>
+      <div className="gridWrapper noMinHeight">
+        <GridElement
+          fixed={data.SearchingImage.childImageSharp.fixed}
+          title="Niewiele wiem o elearningu"
+          badge="Szukam informacji"
+          link={'/krok-1'}
+          color="#00BFA6"
+        />
 
+        <GridElement
+          fixed={data.WorkingImage.childImageSharp.fixed}
+          title={[
+            'Jestem przekonany(a)',
+            <br className="rwd-break"></br>,
+            ' do wykorzystania elearningu',
+          ]}
+          badge="Szukam rozwiązania"
+          link={'/krok-2'}
+        />
+        <GridElement
+          fixed={data.BusinessDeal.childImageSharp.fixed}
+          title="Znam rozwiązania do elearningu"
+          badge="Potrzebuję konkretów"
+          color="#6C63FF"
+          link={'/krok-3'}
+        />
+      </div>
       <div className="featuresWrapper">
         <h2 className="mainTitle">
           Najczęściej spotykane scenariusze wykorzystania platformy
@@ -241,38 +376,8 @@ w formie e-learningu zwraca się bardzo szybko."
           </FeaturesElement>
         </div>
       </div>
-      <h2 className="mainTitle">W jaki sposób możemy pomóc?</h2>
-      <p className="mainHelper">
-        (Proszę zaznaczyć opis, który najlepiej pasuje do Państwa)
-      </p>
-      <div className="gridWrapper noMinHeight">
-        <GridElement
-          fixed={data.SearchingImage.childImageSharp.fixed}
-          title="Niewiele wiem o elearningu"
-          badge="Szukam informacji"
-          link={'/krok-1'}
-          color="#00BFA6"
-        />
 
-        <GridElement
-          fixed={data.WorkingImage.childImageSharp.fixed}
-          title={[
-            'Jestem przekonany(a)',
-            <br className="rwd-break"></br>,
-            ' do wykorzystania elearningu',
-          ]}
-          badge="Szukam rozwiązania"
-          link={'/krok-2'}
-        />
-        <GridElement
-          fixed={data.BusinessDeal.childImageSharp.fixed}
-          title="Znam rozwiązania do elearningu"
-          badge="Potrzebuję konkretów"
-          color="#6C63FF"
-          link={'/krok-3'}
-        />
-      </div>
-      <div className="featuresWrapper">
+      <div className="">
         <div className="testimonialWrapper">
           <h2 className="mainTitle">Opinie naszych klientów</h2>
           <Slider {...settings}>
@@ -299,71 +404,6 @@ w formie e-learningu zwraca się bardzo szybko."
           </Slider>
         </div>
       </div>
-      <h2 className="mainTitle">Z naszej platformy korzystają m. in.:</h2>
-      <div className="logoWrapper">
-        <a
-          href="https://etechnologie.pl/nasze-prace/certes/"
-          target="__blank"
-          rel="noopener"
-        >
-          <Img fixed={data.Certes.childImageSharp.fixed} />
-        </a>
-        <a
-          href="https://etechnologie.pl/nasze-prace/jbb-team/"
-          target="__blank"
-          rel="noopener"
-        >
-          <Img fixed={data.JBB.childImageSharp.fixed} />
-        </a>
-        <a
-          href="https://etechnologie.pl/nasze-prace/elzab/"
-          target="__blank"
-          rel="noopener"
-        >
-          <Img fixed={data.Elzab.childImageSharp.fixed} />
-        </a>
-        <a
-          href="https://etechnologie.pl/nasze-prace/get-it/"
-          target="__blank"
-          rel="noopener"
-        >
-          <Img fixed={data.Getit.childImageSharp.fixed} />
-        </a>
-        <a
-          href="https://etechnologie.pl/nasze-prace/semahead/"
-          target="__blank"
-          rel="noopener"
-        >
-          <Img fixed={data.Semahead.childImageSharp.fixed} />
-        </a>
-        <a
-          href="https://etechnologie.pl/nasze-prace/platforma-e-learningowa-dla-zachodniopomorskiej-inspekcji-weterynaryjnej-w-szczecinie/"
-          target="__blank"
-          rel="noopener"
-        >
-          <Img fixed={data.ZIW.childImageSharp.fixed} />
-        </a>
-        <a
-          href="https://etechnologie.pl/nasze-prace/tenzi/"
-          target="__blank"
-          rel="noopener"
-        >
-          <Img fixed={data.Tenzi.childImageSharp.fixed} />
-        </a>
-        <a
-          href="https://etechnologie.pl/nasze-prace/inter-team/"
-          target="__blank"
-          rel="noopener"
-        >
-          <Img fixed={data.InterTeam.childImageSharp.fixed} />
-        </a>
-      </div>
-      <ModalVideo
-        channel="youtube"
-        isOpen={isOpen}
-        videoId="H4mbVJGN8wM"
-        onClose={() => setIsOpen(false)}
-      />
     </MainTemplate>
   )
 }
