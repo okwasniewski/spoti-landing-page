@@ -58,7 +58,9 @@ const PostTemplate = ({ data: { wpPost } }) => {
         canonical={wpPost?.slug}
         keywords={wpPost?.seo?.metaKeywords}
         slug={wpPost?.slug}
-        ogImage={wpPost.featuredImage.node.localFile.childImageSharp.fixed.src}
+        ogImage={
+          wpPost?.featuredImage?.node?.localFile?.childImageSharp?.fixed?.src
+        }
       />
 
       <div className="post">
