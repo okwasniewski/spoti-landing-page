@@ -86,7 +86,9 @@ button:hover {
     width: 100%;
   }
   .rightColumn {
-    padding: 60px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     ul {
       list-style-type: none;
       svg {
